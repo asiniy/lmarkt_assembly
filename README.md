@@ -1,5 +1,5 @@
-# Quick start for a new project #
-Perfect project/pattern for the classic layout. Not intended for SPA.
+# lmarkt assembly #
+Layout of an online store
 
 ## Stack ##
 - Grunt
