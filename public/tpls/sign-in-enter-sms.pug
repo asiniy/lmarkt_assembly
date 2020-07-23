@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta(charset="utf-8")
-    title lmarkt_assembly | Главная
+    title lmarkt_assembly | Вход ввод смс
     meta(name="keywords" content="")
     meta(name="description" content="")
     meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
@@ -11,7 +11,7 @@ html
     link(rel="stylesheet" href="css/app-project.css")
     //- Favicons https://www.favicon-generator.org/
   body
-    include ../blocks/header/header
-    include ../blocks/footer/footer
+    .popup-window-auth
+      include ../blocks/sign-in/sign-in-enter-sms
     script(src="js/app-project-base.js")
     script(src="js/app-project-run.js")

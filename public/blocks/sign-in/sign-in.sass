@@ -1,0 +1,101 @@
+.sign-in
+  background: $color-white
+  border-radius: 3px
+  padding: 0 0 54px
+  width: 100%
+  max-width: 415px
+  position: absolute
+  left: 50%
+  top: 100px
+  border-radius: 3px
+  transform: translate3d(-50%,0,0)
+  &__container
+    width: 100%
+    &--top
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 15px
+      margin: 0 0 10px
+      border-radius: 3px 3px 0 0
+    &--middle
+      padding: 0 60px
+      margin: 0 0 41px
+    &--bottom
+      padding: 0 60px
+    &--with-bg
+      background: $color-purple-2
+      padding: 0 15px 0 32px
+      margin: 0 0 51px
+    &--indent-small
+      margin-bottom: 6px
+  &__close
+    @extend .icon-close
+    margin: 0 0 0 auto
+  &__title
+    font: 400 30px/1.2 $font-secondary
+    color: $color-black
+    margin: 0 0 4px
+    &--big-indent
+      margin: 0 0 32px
+  &__subtitle
+    font: 400 15px/1.533 $font-primary
+    color: rgba($color-black,0.5)
+    margin: 0 0 35px
+    &--big-indent
+  &__form-row
+    &--input-text
+      margin-bottom: 15px
+    &--big-indent
+      margin-bottom: 21px
+    &--big-indent-2
+      margin-bottom: 31px
+    &:last-child
+      margin-bottom: 0
+  &__label
+    font: 700 15px/1.533 $font-primary
+    color: $color-black
+    margin: 0 0 15px
+    &--error
+      color: $color-red
+  &__form-input
+    &--phone
+  &__btn
+    @include btn-default
+  &__descr
+    font: 400 15px/1.533 $font-primary
+    color: rgba($color-black,0.5)
+    &--small
+      font-size: 13px
+      line-height: 1.76923
+      margin: 0 0 7px
+  &__link
+    font: 400 15px/1.533 $font-primary
+    color: rgba($color-purple,0.5)
+    text-decoration: none
+    &--dotted
+      font-size: 13px
+      color: rgba($color-purple,0.5)
+      position: relative
+      padding: 0 0 4px
+      &:after
+        content: ''
+        width: 100%
+        height: 2px
+        background-image: url("data:image/svg+xml,%3Csvg width='114' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.3' d='M.804 2V.632h.984V2H.804zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.589 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.589 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.983V2h-.983zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.589 0V.632h.984V2h-.984zm2.59 0V.632h.984V2H52.6zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.589 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.985zm2.59 0V.632h.983V2H78.5zm2.59 0V.632h.983V2h-.984zm2.589 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.985zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.59 0V.632h.983V2h-.984zm2.589 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984zm2.589 0V.632h.984V2h-.984zm2.59 0V.632h.984V2h-.984z' fill='%23A0148E'/%3E%3C/svg%3E")
+        background-position: left center
+        background-repeat: repeat-x
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+    &--back
+      font: 400 15px/45px $font-primary
+      color: rgba($color-purple,0.6)
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      &:before
+        content: ''
+        @extend .icon-arrow-red-left
+        margin: 0 19px 0 0

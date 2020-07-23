@@ -1,0 +1,22 @@
+form.sign-in(action="")
+  .sign-in__container.sign-in__container--top.sign-in__container--with-bg
+    a.sign-in__link.sign-in__link--back Вернуться к&nbsp;вводу номера
+    a.sign-in__close(href="#")
+  .sign-in__container.sign-in__container--middle
+    .sign-in__title.sign-in__title--big-indent введите код
+    .sign-in__form-row.sign-in__form-row--input-text
+      label.sign-in__label.sign-in__label--error Неверный код! Введите еще раз
+      input.sign-in__form-input(
+        type="text"
+        value=""
+        name=""
+        id=""
+        placeholder="Введите код"
+      )
+    .sign-in__form-row
+      button.sign-in__btn(type="submit") Подтвердить
+  .sign-in__container.sign-in__container--bottom
+    .sign-in__descr.sign-in__descr--small
+      | Новый код можно выслать через&nbsp;
+      span.sign-in__counter 00:59
+    a.sign-in__link.sign-in__link--dotted(href="#") Выслать новый код
