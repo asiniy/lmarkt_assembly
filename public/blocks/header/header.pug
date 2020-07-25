@@ -25,10 +25,22 @@
     .header__add-nav
       a.header__add-nav-item.header__add-nav-item--favorites(href="#") Избранное
       a.header__add-nav-item.header__add-nav-item--comparison(href="#") Сравнение
-      a.header__add-nav-item.header__add-nav-item--profile(href="#") Профиль
+      .header__profile-wrapper
+        a.header__add-nav-item.header__add-nav-item--profile(href="#") Профиль
+        .header__profile-list
+          .header__profile-row
+            a.header__profile-item.header__profile-item--green(href="#") Партнёрка
+            a.header__profile-item.header__profile-item--blue(href="#") Операторская
+            a.header__profile-item(href="#") Мои заказы
+            a.header__profile-item(href="#") Мои данные
+            a.header__profile-item(href="#") Партнёрская программа
+          .header__profile-row
+            a.header__profile-item.header__profile-item--gray(href="#") Выход
       a.header__add-nav-item.header__add-nav-item--basket(href="#")
         .header__add-nav-counter 2
         | Корзина
+  include ../nav/nav
+  .header__overlay
 .header.header--mobile
   .header__container.header__container--top
     a.header__mobile-nav-item.header__mobile-nav-item--menu(href="#") Меню

@@ -1,0 +1,247 @@
+.nav
+  width: 100%
+  position: absolute
+  left: 50%
+  transform: translate3d(-50%,0,0)
+  top: 98px
+  background: $color-white
+  border-radius: 3px
+  height: 923px
+  width: 100%
+  max-width: 1210px
+  overflow: hidden
+  z-index: 5
+  display: none
+  justify-content: flex-start
+  align-items: flex-start
+  padding: 0 50px 0 0
+  &--active
+    display: flex
+  &__list
+    display: none
+    list-style: none
+    background: $color-white
+    position: relative
+    &--global
+      width: 316.21px
+      height: 100%
+      position: relative
+      background: $color-purple-2
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: stretch
+      // padding: 0 0 0 20px
+      // background: $color-purple-2
+      // min-width: 502px
+      // width: auto
+      // padding: 15px 30px
+    &--secondary
+      width: 291px
+      padding: 0 0 0 7px
+      position: relative
+      left: -1px
+      white-space: nowrap
+      top: 29px
+      background: none
+      box-shadow: none
+      display: none
+      &.nav__list--active
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: stretch
+      // height: 100%
+      &:after
+        content: ''
+        width: 3px
+        height: 200%
+        position: absolute
+        right: 0
+        top: -50px
+        bottom: 0
+        background: $color-purple-2
+      @include breakpoint($tablet)
+        transform: translate3d(0,0,0)
+        position: relative
+      .nav__list--global .nav__item--active &
+        display: block
+    &--tertiary
+      width: 294px
+      padding: 0 0 0 7px
+      position: relative
+      left: -1px
+      white-space: nowrap
+      top: 29px
+      background: none
+      box-shadow: none
+      display: none
+      &.nav__list--active
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: stretch
+      @include breakpoint($tablet)
+        transform: translate3d(0,0,0)
+        position: relative
+      .nav__list--global .nav__item--active &
+        display: block
+  &__item
+    // &--background
+    //   background: $color-purple-2
+    .nav__list--global > &
+      max-width: 311px
+      margin: 0 0 4px 19px
+      width: 100%
+      position: relative
+      &:after
+        content: ''
+        @extend .icon-arrow-gray-big-right
+        position: absolute
+        top: 50%
+        right: 35px
+        transform: translate3d(0,-50%,0)
+        opacity: 0.13
+        transition: all 0.1s ease
+      &--active
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='11' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 17l8-8-8-8' stroke='%23A0148E' stroke-width='2.5'/%3E%3C/svg%3E")
+          opacity: 1
+      &:first-child
+        margin: 31px 0 4px 19px
+      &:last-child
+        margin-bottom: 0
+      // background: $color-purple-2
+    .nav__list--secondary > &
+      padding: 0 0 0 15px
+      margin: 0 0 4.3px
+      position: relative
+      &:after
+        content: ''
+        @extend .icon-arrow-gray-big-right
+        position: absolute
+        top: 50%
+        right: 26px
+        transform: translate3d(0,-50%,0)
+        opacity: 0.13
+        transition: all 0.1s ease
+      &--active
+        &:after
+          opacity: 1
+          background-image: url("data:image/svg+xml,%3Csvg width='11' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 17l8-8-8-8' stroke='%23A0148E' stroke-width='2.5'/%3E%3C/svg%3E")
+    .nav__list--tertiary > &
+      padding: 0 0 0 15px
+      margin: 0 0 4.3px
+      position: relative
+  &__list-link
+    font: 700 15px/1.6 $font-primary
+    color: $color-black
+    text-decoration: none
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    user-select: none
+    padding: 10.5px 0 10.5px 19px
+    // @include hover
+    .nav__item--active &
+      background: $color-white
+      color: $color-purple
+    .nav__list--secondary .nav__item--active &
+      background: $color-purple-2
+      color: $color-purple !important
+    .nav__list--global .nav__item > &,
+    .nav__list--global .nav__item > &.nav__list-link--active
+      &:hover
+        color: $color-purple
+    .nav__list--secondary .nav__item > &
+      padding: 10.5px 0 10.5px 19px
+      font: 400 15px/1.6 $font-primary
+      color: $color-black
+      &:hover
+        color: $color-purple
+    .nav__list--tertiary .nav__item > &
+      padding: 10.5px 0 10.5px 19px
+      font: 400 15px/1.6 $font-primary
+      color: $color-black
+      &:hover
+        color: $color-purple
+    .nav__list--secondary .nav__item > &,
+    .nav__list--secondary .nav__item > &:hover
+      &:after
+        display: none
+    .nav__list--tertiary .nav__item > &
+      padding: 10.5px 0 10.5px 19px
+      font: 400 15px/1.6 $font-primary
+      color: $color-black
+    .nav__list--tertiary .nav__item > &,
+    .nav__list--tertiary .nav__item > &:hover
+      &:after
+        display: none
+  &__ad
+    margin: 40px 0 0 auto
+    max-width: 250px
+    width: 100%
+  &__ad-row
+    margin: 0 0 36px
+    display: flex
+    width: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    &:last-child
+      margin-bottom: 0
+  &__ad-item
+    text-decoration: none
+    margin: 0 0 37px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    position: relative
+    &:last-child
+      margin-bottom: 0
+    &--with-text
+      height: 380px
+      overflow: hidden
+  &__subtitle
+    font: 400 20px/1.2 $font-secondary
+    color: $color-white
+    position: relative
+    z-index: 2
+    text-align: center
+    margin: 25px 0 13px 0
+    padding: 0 10px
+  &__title
+    font: 400 30px/1.2 $font-secondary
+    color: $color-white
+    position: relative
+    z-index: 2
+    text-align: center
+    padding: 0 10px
+  &__ad-price
+    font: 700 30px/45px $font-primary
+    color: $color-purple
+    background: $color-white
+    border-radius: 2px
+    padding: 0 12px
+    position: absolute
+    left: 50%
+    bottom: 40px
+    transform: translate3d(-50%,0,0)
+    display: flex
+    justify-content: center
+    align-items: center
+    white-space: nowrap
+    z-index: 2
+  &__ad-img
+    display: block
+    width: 100%
+    height: auto
+    z-index: 1
+    .nav__ad-item--with-text &
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0

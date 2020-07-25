@@ -1,0 +1,156 @@
+.tools-by-type
+  margin: 0 0 71px
+  position: relative
+  &__container
+    @include glass
+  &__title
+    font: 400 30px/1.2 $font-secondary
+    color: $color-black
+    margin: 0 0 57px
+    position: relative
+    z-index: 2
+  &__slider
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+  &__img-wrapper
+    margin: 0 auto 23px
+    height: 65px
+    display: flex
+    justify-content: center
+    align-items: center
+    &--guitar
+      width: 65px
+    &--synth
+      width: 61.64px
+    &--drum
+      width: 41.06px
+    &--saxophone
+      width: 45.28px
+    &--accordion
+      width: 60.38px
+  &__img
+    display: block
+    width: 100%
+    height: auto
+  &__subtitle
+    font: 700 22px/1.5 $font-primary
+    color: $color-black
+    text-align: center
+    margin: 0 0 13px
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+  &__list-item
+    font: 400 15px/2.2 $font-primary
+    color: rgba($color-black,0.2)
+    text-decoration: none
+    transition: color 0.24s ease
+    text-align: center
+    &:hover
+      color: $color-purple
+  &__nav
+  &__nav-item
+    &--prev
+    &--next
+  &__nav
+  &__nav-item
+    z-index: 2
+    width: 45px
+    height: 45px
+    background: $color-purple-2
+    position: absolute
+    top: calc(50% - 62px)
+    transform: translate3d(0,-50%,0)
+    cursor: pointer
+    transition: all 0.24s ease
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate3d(-50%,-50%,0)
+      transition: all 0.24s ease
+    &:hover
+      background: $color-purple-4
+    &--prev
+      left: 22px
+      border-radius: 0 2px 2px 0
+      &:after
+        @extend .icon-arrow-red-big-left
+      &:hover
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='15' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 1L2 13l12 12' stroke='%23D866C9' stroke-width='2.5'/%3E%3C/svg%3E")
+    &--next
+      right: 22px
+      border-radius: 2px 0 0 2px
+      &:after
+        @extend .icon-arrow-red-big-right
+      &:hover
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='15' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25l12-12L1 1' stroke='%23D866C9' stroke-width='2.5'/%3E%3C/svg%3E")
+  .slick-dots
+    margin: 30px 0 0 0
+    list-style: none
+    position: absolute
+    left: 50%
+    bottom: -12px
+    z-index: 2
+    transform: translate3d(-50%,0,0)
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+      text-indent: -9999px
+      width: 10px
+      height: 10px
+      border-radius: 5px
+      background: rgba($color-purple, 0.15)
+      margin: 0 6.25px
+      cursor: pointer
+      transition: background 0.1s ease
+      &:hover
+        background: rgba($color-purple,0.6)
+      &.slick-active
+        width: 15.28px
+        height: 15.28px
+        border-radius: 8px
+        background: $color-purple
+  .slick-slide
+    margin: 0 5px
+  .slick-list
+    margin: 0 -5px
+  .slick-active
+    outline: none
+  &__arrow
+    content: ''
+    width: 100%
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 69.27%)
+    height: 42.81437125748503%
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 3px
+    z-index: 1
+    cursor: pointer
+    transition: all 0.24s ease
+    &:after
+      content: ''
+      @extend .icon-arrow-red-bottom-2
+      position: absolute
+      left: 50%
+      bottom: 48px
+      transform: translate3d(-50%,0,0)
+      width: 30px
+      height: 15px
+      z-index: 2
+      transition: all 0.24s ease
+    &:hover
+      background: linear-gradient(180deg, rgba(255, 249, 254, 0) 0%, #FFF9FE 69.27%)
+      transition: all 0.24s ease
+      &:after
+        background-image: url("data:image/svg+xml,%3Csvg width='26' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l12 12L25 1' stroke='%23D866C9' stroke-width='2.5'/%3E%3C/svg%3E")

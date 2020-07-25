@@ -1,0 +1,130 @@
+.popular-categories
+  position: relative
+  width: 100%
+  padding: 0 0 42.5px
+  margin: 0 0 29px
+  &__container
+    @include glass
+    height: 100%
+  &__slider
+    height: 100%
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    height: 100%
+    width: 100%
+    border-radius: 3px
+    // padding: 66px 110px 74px 110px
+    position: relative
+    text-decoration: none
+    position: relative
+    overflow: hidden
+    &:after
+      content: ''
+      width: 313.637487199406759%
+      height: 140.605247360429394%
+      background: linear-gradient(180.08deg, rgba(82, 0, 71, 0) 39.47%, #520047 67.19%)
+      opacity: 0.3
+      display: block
+      position: absolute
+      left: 50%
+      top: -57.5px
+      transform: translate3d(-50%,0,0)
+      z-index: 2
+      transition: all 0.24s ease
+    &:hover
+      &:after
+        background: linear-gradient(180.08deg, rgba(82, 0, 71, 0) 39.47%, #520047 67.19%)
+        opacity: 0.4
+        visibility: visible
+        transition: all 0.24s ease
+  &__title
+    font: 400 30px/1.2 $font-secondary
+    color: $color-black
+    margin: 0 0 32px
+    position: relative
+    z-index: 2
+  &__subtitle
+    font: 700 22px/1.5 $font-primary
+    color: $color-white
+    position: absolute
+    left: 50%
+    bottom: 23px
+    transform: translate3d(-50%,0,0)
+    z-index: 3
+    white-space: nowrap
+  &__img
+    display: block
+    width: 100%
+    height: auto
+    border-radius: 3px
+  &__nav
+  &__nav-item
+    z-index: 2
+    width: 45px
+    height: 45px
+    background: $color-purple-2
+    position: absolute
+    top: 50%
+    transform: translate3d(0,-50%,0)
+    cursor: pointer
+    transition: all 0.24s ease
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate3d(-50%,-50%,0)
+      transition: all 0.24s ease
+    &:hover
+      background: $color-purple-4
+    &--prev
+      left: 20px
+      border-radius: 0 2px 2px 0
+      &:after
+        @extend .icon-arrow-red-big-left
+      &:hover
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='15' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 1L2 13l12 12' stroke='%23D866C9' stroke-width='2.5'/%3E%3C/svg%3E")
+    &--next
+      right: 20px
+      border-radius: 2px 0 0 2px
+      &:after
+        @extend .icon-arrow-red-big-right
+      &:hover
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='15' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25l12-12L1 1' stroke='%23D866C9' stroke-width='2.5'/%3E%3C/svg%3E")
+  .slick-dots
+    margin: 30px 0 0 0
+    list-style: none
+    position: absolute
+    left: 50%
+    bottom: -42.5px
+    transform: translate3d(-50%,0,0)
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+      text-indent: -9999px
+      width: 10px
+      height: 10px
+      border-radius: 5px
+      background: rgba($color-purple, 0.15)
+      margin: 0 5.25px
+      cursor: pointer
+      transition: background 0.1s ease
+      &:hover
+        background: rgba($color-purple,0.6)
+      &.slick-active
+        width: 13px
+        height: 13px
+        border-radius: 6.5px
+        background: $color-purple
+  .slick-slide
+    margin: 0 12.875px
+  .slick-list
+    margin: 0 -12.875px
+  .slick-active
+    outline: none
